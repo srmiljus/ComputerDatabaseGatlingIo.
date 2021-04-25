@@ -1,0 +1,5 @@
+#idea
+#target
+ComputerDatabaseGatlingio.iml
+# Project exclude paths
+/target/
