@@ -8,6 +8,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 public class ComputerDatabaseTest extends BaseTest {
 
     ComputerDatabaseHomePage computerDatabaseHomePage;
@@ -42,7 +44,7 @@ public class ComputerDatabaseTest extends BaseTest {
     }
     @Parameters({"computerName", "introducedDate", "discontinuedDate", "company", "alertMessage"})
     @Test
-    public void addANewComputerSuccess(String computerName, String introducedDate, String discontinuedDate, String company, String alertMessage) throws InterruptedException {
+    public void addANewComputerSuccess(String computerName, String introducedDate, String discontinuedDate, String company, String alertMessage) throws InterruptedException, IOException {
         computerDatabaseHomePage = new ComputerDatabaseHomePage(driver);
         addAComputerPage = new AddAComputerPage(driver);
         editComputerPage = new EditComputerPage(driver);
@@ -55,6 +57,8 @@ public class ComputerDatabaseTest extends BaseTest {
         addAComputerPage.clickCreateThisComputer();
 
         computerDatabaseHomePage.assertAlertMessage(alertMessage);
+
+        reportScreenShot("TestAllure","newComputerHaseBeenCreatedSuccessfully");
     }
     @Parameters({"computerNameToEdit", "computerName", "introducedDate", "discontinuedDate", "company", "alertMessage"})
     @Test
