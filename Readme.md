@@ -5,3 +5,4 @@
 - Install Chrome or/and Firefox browser
 - Git clone or download project zip  
 - Open CMD navigate to the project root and run "mvn clean test"
+- To see the results run the following command allure serve C:\ComputerDatabaseGatlingIo\allure-results
