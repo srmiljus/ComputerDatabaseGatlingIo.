@@ -58,7 +58,7 @@ public class ComputerDatabaseTest extends BaseTest {
 
         computerDatabaseHomePage.assertAlertMessage(alertMessage);
 
-        reportScreenShot("TestAllure","newComputerHaseBeenCreatedSuccessfully");
+        reportScreenShot("TestAllure","newComputerHasBeenCreatedSuccessfully");
     }
     @Parameters({"computerNameToEdit", "computerName", "introducedDate", "discontinuedDate", "company", "alertMessage"})
     @Test
